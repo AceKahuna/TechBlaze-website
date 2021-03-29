@@ -1,0 +1,42 @@
+.services{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+
+    @include responsive(tab-port){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(phone){
+        grid-template-columns: 1fr;
+    }
+
+
+    .service{
+        padding: 30px;
+
+        @include responsive(phone){
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2{
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 20px;
+            color: #1b206e;
+        }
+
+        &:hover{
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .icon{
+
+            img{
+                max-width: 100px;
+            }
+        }
+    }
+
+}
